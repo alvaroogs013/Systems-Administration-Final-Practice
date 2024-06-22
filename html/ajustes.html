@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>AvanzaII</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+</head>
+<body>
+    <div class="container">
+        <div class="screenMod">
+            <div class="screen__content">
+                <div class="row">
+                <form method="post" action="/cgi-bin/chg_pass.cgi" class="login">
+                    <h3>Modificar contraseña</h3>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="password" name="OPwd" class="login__input" placeholder="Old Password" required>
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" name="NPwd" class="login__input" placeholder="New Password" required>
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" name="NRPwd" class="login__input" placeholder="Repeat New Password" required>
+                    </div>
+                    <button class="button login__submit">
+                        <span class="button__text">Change password</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>			
+                </form>
+                <form method="post" action="/cgi-bin/cambiar_datos.cgi" class="login">
+                    <h3>Modificar datos personales</h3>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" name="email" class="login__input" placeholder="email" required>
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="text" name="name" class="login__input" placeholder="name" required>
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="text" name="surname" class="login__input" placeholder="surname" required>
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="text" name="address" class="login__input" placeholder="address" required>
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="text" name="phone" class="login__input" placeholder="phone" required>
+                    </div>
+                    <button class="button login__submit">
+                        <span class="button__text">Change data</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>	
+                    		
+                </form>
+                <form action="/cgi-bin/eliminar.cgi" method="POST">
+                    <div class="button">
+                        <button class="btn1" type="submit">
+                            <p><strong>Eliminar la cuenta</strong></p>
+                        </button>
+                        <p>(Esta acción no se puede deshacer)</p>
+                    </div>
+                </form>
+            </div>
+            
+        </div>		
+        </div>
+    </div>
+</body>
+</html>
